@@ -4,7 +4,7 @@ import env from '@/config/env.config'
 const connectToDatabase = async (callback: () => void) => {
   try {
     console.log('Connecting to MongoDB');
-    await mongoose.connect(env.DATABASE_URI, {
+    await mongoose.connect(env.DATABASE_URL, {
       // useUnifiedTopology: true,
       // useNewUrlParser: true,
     });

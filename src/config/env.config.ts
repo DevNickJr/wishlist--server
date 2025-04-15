@@ -19,11 +19,11 @@ const envSchema = z.object({
     JWT_EXPIRATION: z.string().refine(value => !isNaN(Number(value)) && Number(value) > 0, {
         message: 'JWT_EXPIRATION must be a positive number',
       }).transform(Number),
-    DATABASE_URI: z.string(),
-    AWS_ACCESS_KEY_ID: z.string(),
-    AWS_SECRET_ACCESS_KEY: z.string(),
-    AWS_REGION: z.string(),
-    AWS_S3_BUCKET: z.string(),
+    DATABASE_URL: z.string(),
+    // AWS_ACCESS_KEY_ID: z.string(),
+    // AWS_SECRET_ACCESS_KEY: z.string(),
+    // AWS_REGION: z.string(),
+    // AWS_S3_BUCKET: z.string(),
     // TEST_MONGO_URI: z.string(),
 })
 

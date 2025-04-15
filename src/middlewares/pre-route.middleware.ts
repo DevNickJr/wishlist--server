@@ -8,7 +8,7 @@ export default function PreRouteMiddleware (app: Express) {
     app.use(cors(corsOptions));
     
     // Handle preflight requests explicitly
-    app.options('*', (req, res) => {
+    app.options('*name', (req, res) => {
         res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
         res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS');
         res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
